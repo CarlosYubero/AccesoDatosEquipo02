@@ -1,14 +1,15 @@
 package ut01.act06;
 import java.io.Serializable;
+import java.sql.Date;
 
 public class Deparment implements Serializable {
 
-	private static final long serialVersionUID = 1V;
+	private static final long serialVersionUID = 1L;
 	private int id;
 	private String lastname;
 	private String name;
 	private String job;
-	private date regis_date;
+	private Date regis_date;//
 	private int comission;
 	private int dep_number;	
 
@@ -43,15 +44,15 @@ public class Deparment implements Serializable {
 		return id;
 	}
 	
-	public int getLastName(){
+	public String getLastName(){
 		return lastname;
 	}
 	
-	public int getName(){
+	public String getName(){
 		return name;
 	}
 	
-	public int getJob(){
+	public String getJob(){
 		return job;
 	}
 	
@@ -60,7 +61,7 @@ public class Deparment implements Serializable {
 	}
 	
 	public int getDepNumber(){
-		return dept_number;
+		return dep_number;
 	}
 	
 	@Override

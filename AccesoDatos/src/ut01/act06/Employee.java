@@ -3,7 +3,8 @@ package ut01.act06;//
 import java.io.Serializable;
 import java.util.GregorianCalendar;
 
-private static final long serialVersionUID = 1V;
+public class Employee implements Serializable {
+private static final long serialVersionUID = 1L;
 private int id;
 private String name;
 private String head;
@@ -28,11 +29,11 @@ public int getId(){
 	return id;
 }
 
-public int getName(){
+public String getName(){
 	return name;
 }
 
-public int getHead(){
+public String getHead(){
 	return head;
 }
 
