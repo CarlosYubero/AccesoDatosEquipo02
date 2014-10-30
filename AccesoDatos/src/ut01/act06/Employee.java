@@ -10,44 +10,42 @@ public class Employee implements Serializable {
 	private String name;
 	private String head;
 
-
 	public Employee() {
 		super();
 	}
 
-	public void setId(int id){
-		this.id=id;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public void setName(String name){
-		this.name=name;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public void setHead(String head){
-		this.head=head;
+	public void setHead(String head) {
+		this.head = head;
 	}
 
-	public int getId(){
+	public int getId() {
 		return id;
 	}
 
-	public String getName(){
+	public String getName() {
 		return name;
 	}
 
-	public String getHead(){
+	public String getHead() {
 		return head;
 	}
 
+	@Override
+	public boolean equals(Object obj) {
+		return super.equals(obj);
+	}
 
-		@Override
-		public boolean equals(Object obj) {
-			return super.equals(obj);
-		}
-
-		@Override
-		public String toString() {
-			return super.toString();
-		}
+	@Override
+	public String toString() {
+		return super.toString();
+	}
 
 }

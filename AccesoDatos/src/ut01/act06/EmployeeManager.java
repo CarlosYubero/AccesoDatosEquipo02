@@ -7,10 +7,12 @@ public class EmployeeManager {
 
 	public static final String path = "./resources/employee.bin";
 	private static final ArrayList<Employee> employeeList = new ArrayList();
+	
+	Employee emp = new Employee();
 
 	// Crear un fichero con al menos 10 empleados de prueba de tres departamentos diferentes
 	private void dummy() {
-
+		
 	}
 	
 	// Load binary file in memory
