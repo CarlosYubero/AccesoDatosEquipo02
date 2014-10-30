@@ -1,5 +1,5 @@
 package ut01.act06;
-import java.io.Serializable;
+import java.util.Date;
 
 public class Deparment {
 
