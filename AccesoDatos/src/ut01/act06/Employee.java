@@ -11,6 +11,7 @@ private String head;
 
 
 public Employee() {
+	super();
 }
 
 public void setId(int id){

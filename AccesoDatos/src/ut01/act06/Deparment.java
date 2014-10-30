@@ -14,6 +14,7 @@ public class Deparment implements Serializable {
 	private int dep_number;	
 
 	public Deparment() {
+		super();
 	}
 	
 	public void setId(int id){
