@@ -1,4 +1,4 @@
-package ut01.act06;
+package ut01.act06;//
 
 import java.io.Serializable;
 import java.util.GregorianCalendar;
