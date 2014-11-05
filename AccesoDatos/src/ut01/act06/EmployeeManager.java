@@ -48,7 +48,7 @@ public class EmployeeManager {
 		return 0;
 	}
 	// Crear un método que devuelva la lista de departamentos sin repetir en un ArrayList
-	public ArrayList<Deparment> getDepartment (){
+	public ArrayList<Departament> getDepartment (){
 		return null;
 	}
 	
