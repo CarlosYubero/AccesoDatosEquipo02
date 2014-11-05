@@ -8,10 +8,77 @@ public class EmployeeManager {
 	public static final String path = "./resources/employee.bin";
 	private static final ArrayList<Employee> employeeList = new ArrayList();
 	
-	Employee emp = new Employee();
+	
 
 	// Crear un fichero con al menos 10 empleados de prueba de tres departamentos diferentes
 	private void dummy() {
+		
+		
+		Deparment direccion = new Deparment();
+		direccion.setId(01);
+		direccion.setName("Direccion");
+		direccion.setHead("");
+		
+		
+		Deparment rrhh = new Deparment();
+		rrhh.setId(02);
+		rrhh.setName("RRHH");
+		rrhh.setHead("");
+
+		Deparment contabilidad = new Deparment();
+		contabilidad.setId(03);
+		contabilidad.setName("Contabilidad");
+		contabilidad.setHead("");
+		
+		Employee emp1 = new Employee();
+		emp1.setId(01);
+		emp1.setName("Roberto");
+		emp1.setLastName("Gomez");
+		emp1.setJob("Contable");
+		emp1.setComission(0);
+		emp1.setDepNumber(03);
+		
+		employeeList.add(emp1);
+		
+		Employee emp2 = new Employee();
+		emp2.setId(02);
+		emp2.setName("Francisco");
+		emp2.setLastName("Delgado");
+		emp2.setJob("RRHH");
+		emp2.setComission(0);
+		emp2.setDepNumber(02);
+		
+		employeeList.add(emp2);
+		
+		Employee emp3 = new Employee();
+		emp3.setId(03);
+		emp3.setName("Antonio");
+		emp3.setLastName("Ruiz");
+		emp3.setJob("RRHH");
+		emp3.setComission(0);
+		emp3.setDepNumber(02);
+		
+		employeeList.add(emp3);
+		
+		Employee emp4 = new Employee();
+		emp4.setId(03);
+		emp4.setName("Jose Luis");
+		emp4.setLastName("Gutierrez");
+		emp4.setJob("Contable");
+		emp4.setComission(0);
+		emp4.setDepNumber(03);
+		
+		employeeList.add(emp4);
+		
+		Employee emp5 = new Employee();
+		emp5.setId(03);
+		emp5.setName("Fernando");
+		emp5.setLastName("Rodriguez");
+		emp5.setJob("Director");
+		emp5.setComission(10);
+		emp5.setDepNumber(01);
+		
+		employeeList.add(emp5);
 		
 	}
 	

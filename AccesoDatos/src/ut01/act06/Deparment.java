@@ -1,69 +1,43 @@
 package ut01.act06;
-import java.util.Date;
 
-public class Deparment {
+import java.io.Serializable;
+import java.sql.Date;
+
+public class Deparment implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private int id;
-	private String lastname;
 	private String name;
-	private String job;
-	private Date regis_date;//
-	private int comission;
-	private int dep_number;	
+	private String head;
 
 	public Deparment() {
 		super();
 	}
-	
-	public void setId(int id){
-		this.id=id;
+
+	public void setId(int id) {
+		this.id = id;
 	}
-	
-	public void setLastName(String lastname){
-		this.lastname=lastname;
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	
-	public void setName(String name){
-		this.name=name;
+
+	public void setHead(String head) {
+		this.head = head;
 	}
-	
-	public void setJob(String job){
-		this.job=job;
-	}
-	
-	public void setComission(int comission){
-		this.comission=comission;
-	}
-	
-	public void setDepNumber(int dep_number){
-		this.dep_number=dep_number;
-	}
-	
-	public int getId(){
+
+	public int getId() {
 		return id;
 	}
-	
-	public String getLastName(){
-		return lastname;
-	}
-	
-	public String getName(){
+
+	public String getName() {
 		return name;
 	}
-	
-	public String getJob(){
-		return job;
+
+	public String getHead() {
+		return head;
 	}
-	
-	public int getComission(){
-		return comission;
-	}
-	
-	public int getDepNumber(){
-		return dep_number;
-	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		return super.equals(obj);
@@ -73,5 +47,4 @@ public class Deparment {
 	public String toString() {
 		return super.toString();
 	}
-
 }
