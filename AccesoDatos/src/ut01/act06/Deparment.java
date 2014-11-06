@@ -23,8 +23,11 @@ public class Deparment implements Serializable {
 		this.id = id;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setName(String name){
+		if(name.length()<20)
+			this.name=name;
+		else
+			System.out.println("error el nombre del Departamento no puede tener mas de 20caracteres");
 	}
 
 	public void setHead(String head) {
