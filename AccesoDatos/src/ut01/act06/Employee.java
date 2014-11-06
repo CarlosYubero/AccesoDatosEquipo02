@@ -15,8 +15,17 @@ public class Employee implements Serializable {
 	private int comission;
 	private int dep_number;
 
-	public Employee() {
+	public Employee(int id, String name, String lastname, String job, Date regis_date, int comission, int dep_number) {
 		super();
+		
+		this.id=id;
+		this.name=name;
+		this.lastname=lastname;
+		this.job=job;
+		this.regis_date=regis_date;
+		this.comission=comission;
+		this.dep_number=dep_number;
+		
 	}
 
 	public void setId(int id) {

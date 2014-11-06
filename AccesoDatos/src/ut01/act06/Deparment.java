@@ -10,8 +10,11 @@ public class Deparment implements Serializable {
 	private String name;
 	private String head;
 
-	public Deparment() {
+	public Deparment(int id, String name, String head) {
 		super();
+		this.id=id;
+		this.name=name;
+		this.head=head;
 	}
 
 	public void setId(int id) {
