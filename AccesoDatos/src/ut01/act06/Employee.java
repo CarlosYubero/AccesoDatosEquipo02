@@ -13,7 +13,7 @@ public class Employee implements Serializable {
 	private String lastname;
 	private String name;
 	private String job;
-	private Date regis_date;
+	private Date regis_date;//
 	private int salary;
 	private int comission;
 	private int dep_number;	
@@ -22,7 +22,7 @@ public class Employee implements Serializable {
 		
 	}
 
-	public Employee(int id, String name, String lastname, String job, Date regis_date, int comission, int dep_number) {
+	public Employee(int id, String lastname, String name, String job, Date regis_date, int salary, int comission, int dep_number) {
 		
 		super();
 		this.id=id;
@@ -30,9 +30,11 @@ public class Employee implements Serializable {
 		this.lastname=lastname;
 		this.job=job;
 		this.regis_date=regis_date;
+		this.salary=salary;
 		this.comission=comission;
 		this.dep_number=dep_number;
 		
+				
 	}
 	
 	public void setId(int id){
@@ -70,7 +72,7 @@ public class Employee implements Serializable {
 		}
 		return true;
 	}
-	public void setRegis_Date(Date regis_date){
+	public void setRegisDate(Date regis_date){
 		
 			this.regis_date=regis_date;
 	
@@ -113,7 +115,7 @@ public class Employee implements Serializable {
 		return job;
 	}
 	
-	public Date getRegis_date(){
+	public Date getRegisdate(){
 		return regis_date;
 	}
 	
@@ -125,20 +127,3 @@ public class Employee implements Serializable {
 		return comission;
 	}
 	
-	public int getDepNumber(){
-		return dep_number;
-	}
-	
-	
-	@Override
-	public boolean equals(Object obj) {
-		return super.equals(obj);
-	}
-
-	@Override
-	public String toString() {
-		return super.toString();
-	}
-
-}
-
