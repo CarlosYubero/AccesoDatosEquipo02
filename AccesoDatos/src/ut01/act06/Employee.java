@@ -13,7 +13,7 @@ public class Employee implements Serializable {
 	private String lastname;
 	private String name;
 	private String job;
-	private Date regis_date;//
+	private Date regis_date;
 	private int salary;
 	private int comission;
 	private int dep_number;	
