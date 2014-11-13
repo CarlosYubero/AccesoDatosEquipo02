@@ -123,7 +123,14 @@ public class EmployeeManager {
 	// crea un mÃ©todo que liste un empleado por su id. 
 	
 	public Employee getEmployee (int idEmp){
-		return null;
+			Employee emp = null;
+				for(Employee e: employeeList){
+					if(e.getId()==idEmp){
+						emp=e;
+					}
+				}
+				
+				return emp;
 	}
 	
 	// Crear un mÃ©todo que modifique el salario de un empleado con el id que recibe y el nuevo salario por parÃ¡metro
