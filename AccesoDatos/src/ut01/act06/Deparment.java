@@ -13,7 +13,7 @@ public class Deparment implements Serializable {
 	private String head;
 
 	public Deparment(int id, String name, String head) {
-		super();
+		//super();
 		this.id=id;
 		this.name=name;
 		this.head=head;

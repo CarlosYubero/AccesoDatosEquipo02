@@ -127,3 +127,8 @@ public class Employee implements Serializable {
 		return comission;
 	}
 	
+	public int getDepNumber(){
+		return dep_number;
+	}
+}
+	

@@ -169,7 +169,16 @@ public class EmployeeManager {
 	
 	// Crear un mÃ©todo que devuelva el sueldo medio de los empleados de un departamento recibido por parÃ¡metro
 	public int averagePaymentDepartment (int idDep){
-		return 0;
+		int average=0;
+		int cont=0;
+		for(int i=0;i<employeeList.size();i++){
+			if(employeeList.get(i).getDepNumber()==idDep){
+				average +=employeeList.get(i).getSalary();
+				cont++;
+			}
+		}
+		average=average/cont;
+		return average;
 	}
 	
 	
