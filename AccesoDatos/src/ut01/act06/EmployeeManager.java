@@ -120,31 +120,38 @@ public class EmployeeManager {
 	public void LoadFile() {
 	}
 	
-	// crea un mÃ©todo que liste un empleado por su id. 
+	// crea un método que liste un empleado por su id. 
 	
 	public Employee getEmployee (int idEmp){
-		return null;
+			Employee emp = null;
+				for(Employee e: employeeList){
+					if(e.getId()==idEmp){
+						emp=e;
+					}
+				}
+				
+				return emp;
 	}
 	
-	// Crear un mÃ©todo que modifique el salario de un empleado con el id que recibe y el nuevo salario por parÃ¡metro
+	// Crear un método que modifique el salario de un empleado con el id que recibe y el nuevo salario por parámetro
 	
 	public boolean getEmployee (int idEmp, double newSalary){
 		return false;
 	}
-	// Crear un mÃ©todo que elimine un empleado con el id que recibe por parÃ¡metro
+	// Crear un método que elimine un empleado con el id que recibe por parámetro
 	public boolean deleteEmployee (int id){
 		return false;
 	}
 	
 	
 	
-	// Crear un método que añada un nuevo empleado recibiendo los datos por parámetro
+	// Crear un m�todo que a�ada un nuevo empleado recibiendo los datos por par�metro
 	public void addEmployee(Employee e) {		
 		employeeList.add(e);	
 	}
 
 	
-	// Crear un método que devuelva los empleados ordenados por apellido en un ArrayList
+	// Crear un m�todo que devuelva los empleados ordenados por apellido en un ArrayList
 	public ArrayList<Employee> OrdenarEmpleados() {
 		ArrayList<Employee> employeeList_ord = employeeList;
 		// Este metodo ordena el arraylist alfabeticamente 
@@ -158,16 +165,16 @@ public class EmployeeManager {
 	}
 	
 	
-	// Crear un mÃ©todo que devuelva el nÃºmero de empleados de un departamento
+	// Crear un método que devuelva el número de empleados de un departamento
 	public int numEmployeeDepartment (int idDep){
 		return 0;
 	}
-	// Crear un mÃ©todo que devuelva la lista de departamentos sin repetir en un ArrayList
+	// Crear un método que devuelva la lista de departamentos sin repetir en un ArrayList
 	public ArrayList<Deparment> getDepartment (){
 		return null;
 	}
 	
-	// Crear un mÃ©todo que devuelva el sueldo medio de los empleados de un departamento recibido por parÃ¡metro
+	// Crear un método que devuelva el sueldo medio de los empleados de un departamento recibido por parámetro
 	public int averagePaymentDepartment (int idDep){
 		int average=0;
 		int cont=0;
@@ -183,3 +190,4 @@ public class EmployeeManager {
 	
 	
 }
+
