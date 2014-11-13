@@ -117,7 +117,25 @@ public class EmployeeManager {
 	}
 	
 	// Load binary file in memory
-	public void LoadFile() {
+	public void LoadFile() throws IOException, ClassNotFoundException{
+		Employee empleado = null;
+		
+		File fichero = new File (pathE);
+		FileInputStream filein = null;
+		ObjectInputStream dataIS = null;
+		//Crea el flujo de salida
+		filein=new FileInputStream(fichero);
+		//Conecto el flujo de bytes al flujo de datos
+		dataIS = new ObjectInputStream(filein);
+		try{
+		empleado=(Employee) dataIS.readObject();
+		while(empleado!=null){
+			employeeList.add(empleado);
+			empleado=(Employee) dataIS.readObject();		
+		}
+		}catch(EOFException eo){
+			dataIS.close();
+		}
 	}
 	
 	// crea un mÃ©todo que liste un empleado por su id. 
