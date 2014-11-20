@@ -218,10 +218,10 @@ public class EmployeeManager {
 	// ArrayList
 	public ArrayList<Deparment> getDepartment() {
 		Deparment departamento = null;
-
+/*
 		File fichero = new File(pathD);
 		FileInputStream filein = null;
-		ObjectInputStredepartamentoam dataIS = null;
+		ObjectInputStream dataIS = null;
 		// Crea el flujo de salida
 		filein = new FileInputStream(fichero);
 		// Conecto el flujo de bytes al flujo de datos
@@ -234,7 +234,7 @@ public class EmployeeManager {
 			}
 		} catch (EOFException eo) {
 			dataIS.close();
-		}
+		}*/
 		return deparmentList;
 	}
 
