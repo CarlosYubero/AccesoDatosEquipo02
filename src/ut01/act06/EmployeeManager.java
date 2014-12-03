@@ -161,26 +161,37 @@ public class EmployeeManager {
 	// Crear un mÃ©todo que modifique el salario de un empleado con el id que
 	// recibe y el nuevo salario por parÃ¡metro
 
-	public boolean getEmployee(int idEmp, double newSalary) {
-		return false;
+	public boolean getEmployee(int idEmp, int newSalary) {
+		boolean modificado = false;
+		for (Employee e : employeeList) {
+			if (e.getId() == idEmp) {
+				e.setSalary(newSalary);
+				if (e.getSalary() == newSalary) {
+					modificado = true;
+				}
+			}
+		}
+
+		return modificado;
 	}
 
 	// Crear un mÃ©todo que elimine un empleado con el id que recibe por
 	// parÃ¡metro
-	public boolean deleteEmployee (int id){
+	public boolean deleteEmployee(int id) {
 		Employee emp = null;
 		boolean borrado = false;
-		for(Employee e: employeeList){
-			if(e.getId()==id){
-				if(employeeList.remove(e)){
-					borrado=true;
+		for (Employee e : employeeList) {
+			if (e.getId() == id) {
+				if (employeeList.remove(e)) {
+					borrado = true;
 				}
 			}
 		}
-		if(borrado==true){
+		if (borrado == true) {
 			return true;
-		}else{
-		return false;}
+		} else {
+			return false;
+		}
 	}
 
 	// Crear un método que añada un nuevo empleado recibiendo los datos por
@@ -218,23 +229,38 @@ public class EmployeeManager {
 	// ArrayList
 	public ArrayList<Deparment> getDepartment() {
 		Deparment departamento = null;
-/*
+
 		File fichero = new File(pathD);
 		FileInputStream filein = null;
-		ObjectInputStream dataIS = null;
-		// Crea el flujo de salida
-		filein = new FileInputStream(fichero);
-		// Conecto el flujo de bytes al flujo de datos
-		dataIS = new ObjectInputStream(filein);
+		ObjectInputStream dataIS = null; // Crea el flujo de salida
 		try {
+			filein = new FileInputStream(fichero);
+			dataIS = new ObjectInputStream(filein);
 			departamento = (Deparment) dataIS.readObject();
 			while (departamento != null) {
 				deparmentList.add(departamento);
 				departamento = (Deparment) dataIS.readObject();
 			}
-		} catch (EOFException eo) {
-			dataIS.close();
-		}*/
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		catch (EOFException eo) {
+			try {
+				dataIS.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 		return deparmentList;
 	}
 
